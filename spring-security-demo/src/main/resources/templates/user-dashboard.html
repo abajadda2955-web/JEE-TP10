@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Espace Utilisateur</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2e7d32;
+            border-bottom: 3px solid #2e7d32;
+            padding-bottom: 10px;
+        }
+        .links {
+            margin: 30px 0;
+        }
+        .links a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background: #1e3c72;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        .logout {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .logout a {
+            color: #dc3545;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>👤 Espace Utilisateur</h2>
+    <p>Bienvenue dans votre espace personnel. Cette zone est accessible aux utilisateurs avec le rôle USER ou ADMIN.</p>
+    <p>Vous pouvez consulter vos informations et gérer votre profil ici.</p>
+
+    <div class="links">
+        <a th:href="@{/home}">🏠 Retour à l'accueil</a>
+        <a th:href="@{/admin/dashboard}">🔐 Zone Admin (si autorisé)</a>
+    </div>
+
+    <div class="logout">
+        <a th:href="@{/logout}">🚪 Se déconnecter</a>
+    </div>
+</div>
+</body>
+</html>
